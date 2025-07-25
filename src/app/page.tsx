@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 
 const images = [
   "/images/front.jpeg",
@@ -125,8 +126,8 @@ export default function HomePage() {
         gsap.to(btn, { duration: 0.3, opacity: 0, x: -9999, y: -9999 });
         return;
       }
-      // @ts-expect-error
-
+     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 
       const btnRect = btn.getBoundingClientRect();
       const btnWidth = btnRect.width;
@@ -254,6 +255,14 @@ export default function HomePage() {
               className="w-full h-full object-cover select-none"
               draggable={false}
             />
+
+            <Image
+  src="/images/front.jpeg"
+  alt="Front"
+  layout="fill"
+  objectFit="cover"
+  draggable={false}
+/>
           </div>
           <div
             className="absolute w-full h-full rounded-lg shadow-md [transform:rotateY(-90deg)_translateZ(150px)]"

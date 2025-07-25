@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import {  Menu, X } from 'lucide-react';
 import LetsTalkButton from './LetsTalkButton';
 
 const Navbar = () => {
