@@ -125,7 +125,8 @@ export default function HomePage() {
         gsap.to(btn, { duration: 0.3, opacity: 0, x: -9999, y: -9999 });
         return;
       }
-      // @ts-ignore: ignore possible null error for btn
+      // @ts-expect-error
+
 
       const btnRect = btn.getBoundingClientRect();
       const btnWidth = btnRect.width;
